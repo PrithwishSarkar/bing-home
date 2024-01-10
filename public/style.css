@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+html{
+    background-image: url(https://h2.gifposter.com/bingImages/Godafoss_EN-US1167261968_1920x1080.jpg);
+    background-size: cover;
+    
+}
+@media only screen and (max-width: 900px) {
+    .headleft{
+        visibility: hidden;
+    }
+    html{
+        background-size: auto;
+    }
+    .searchbar{
+        padding: 0;
+        width: 80vw;
+    }
+    .carousal{
+        flex-direction: column;
+    }
+}

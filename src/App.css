@@ -1,0 +1,145 @@
+.head{
+  /* position: absolute; */
+  width: 80vw;
+  height: 6vh;
+  padding: 5px 155px;
+  display: flex;
+  align-items: center;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  
+}
+#logo{
+  font-size: 1.2rem;
+  margin-left: -30px;
+  margin-right: 40px;
+  /* vertical-align: middle; */
+}
+.head img{
+  width: 24px;
+  margin-top: -5px;
+  vertical-align: middle;
+}
+.headleft{
+  padding: 0 20px;
+  cursor: pointer;
+}
+.headerright{
+  cursor: pointer;
+}
+.headericon{
+  align-self: center;
+}
+.right{
+  display: flex;
+  margin-top: 15px;
+  
+}
+.hamb{
+    padding: 0 20px;
+}
+.carousel{
+  display: flex;
+  flex-direction: row;
+  margin-left: 175px;
+  height: 115px;
+  position: absolute;
+  bottom: 15px;
+  font-size: 0.8rem;
+}
+.snippet{
+  background-color: #2c2c32;
+  width: 200px;
+  color: white;
+  overflow: hidden;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.newshead{
+  padding: 2px;
+}
+.newsbody{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding: 5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  
+  
+}
+.newsbody img{
+  width: 60px;
+  height: 60px;
+}
+.newsbody span{
+  word-wrap: break-word;
+}
+.searchbar{
+  width: 500px;
+  background-color: white;
+  border-radius: 20px;
+  height: 40px;
+  display: grid;
+  /* align-items: center; */
+  grid-template-columns: 75% auto auto auto;
+  /* margin-left: auto; */
+  margin-top: 100px;
+  margin-left: 500px;
+}
+
+/* .searchbar img{
+  width: 30px;
+  background-color: white;
+  border: none;
+} */
+
+#searchtext{
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  padding-left: 25px;
+  font-size: 1.2rem;
+}
+.searchicon{
+  padding-top: 5px;
+  height: 40px;
+  cursor: pointer;
+}
+.arrow{
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.hammenu{
+  position: relative;
+  float: right;
+  margin-right: 160px;
+  background-color: whitesmoke;
+  max-width: 300px;
+  z-index: 2;
+  border-radius: 5px;
+}
+
+.hammenu li{
+  list-style: none;
+  padding: 10px 10px;
+  font-size: 0.8rem;
+}
+.sub{
+  margin-top: -18px;
+}
+.hamicon{
+  margin-left: 5px;
+  margin-right: 10px;
+}
+.nested{
+  margin-left: 30px;
+}
+.rightham{
+  float: right;
+
+}
