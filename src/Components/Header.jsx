@@ -12,11 +12,10 @@ import { MdHomeFilled } from "react-icons/md";
 import { LiaToggleOnSolid } from "react-icons/lia";
 import { IoIosArrowDown } from "react-icons/io";
 
+// PLEASE NOTE: The size and colour in icon tags are attributes; not inline CSS
+
 
 export default function Header(){
-    const smaller={
-        fontSize: "0.72rem"
-    }
     const [show, setShow] = useState(false);
     const [ddone, setddone] = useState(false);
     const [ddtwo, setddtwo] = useState(false);
@@ -58,34 +57,37 @@ export default function Header(){
             <img src="https://www.shareicon.net/download/2015/09/26/646795_web_512x512.png" alt="three dot" /> */}
         </div>
         {show? <div className="hammenu">
+            <div className="hamacc" ><MdAccountCircle color="gray" size={"150px"}/></div>
+            <div className="hamacc">Sign in</div>
             <ul>
-                <li onClick={handleDDone}><span className="hamicon"><IoMdSettings  size={"1rem"}/></span>Settings<span className="rightham"><IoIosArrowDown size={"1rem"} /></span></li>
+
+                <li onClick={handleDDone} className="normal"><span className="hamicon"><IoMdSettings  size={"1rem"}/></span>Settings<span className="rightham"><IoIosArrowDown size={"1rem"} /></span></li>
                 {ddone? <ul>
-                    <li className="nested">Language</li>
-                    <li className="sub nested" style={smaller}>English</li>
-                    <li className="nested">Country/Region</li>
-                    <li className="sub nested" style={smaller}>India</li>
-                    <li className="nested">Location</li>
-                    <li className="nested">Voice Search</li>
-                    <li className="nested">More</li>
+                    <li className="nested normal">Language</li>
+                    <li className="sub nested smaller" >English</li>
+                    <li className="nested normal">Country/Region</li>
+                    <li className="sub nested smaller">India</li>
+                    <li className="nested normal">Location</li>
+                    <li className="nested normal">Voice Search</li>
+                    <li className="nested normal">More</li>
                 </ul> : ""}
 
-                <li><span className="hamicon"><IoLockClosedSharp size={"1rem"}/></span>SafeSearch    Moderate</li>
-                <li><span className="hamicon"><MdOutlineHistoryToggleOff size={"1rem"} /></span>Search History</li>
-                <li><span className="hamicon"><MdManageAccounts size={"1rem"} /></span>My Bing</li>
-                <li><span className="hamicon"><BsShieldLockFill size={"1rem"} /></span>Privacy</li>
-                <li><span className="hamicon"><BiSolidMessage size={"1rem"} /></span>Feedback</li>
+                <li className="normal"><span className="hamicon"><IoLockClosedSharp size={"1rem"}/></span>SafeSearch    Moderate</li>
+                <li className="normal"><span className="hamicon"><MdOutlineHistoryToggleOff size={"1rem"} /></span>Search History</li>
+                <li className="normal"><span className="hamicon"><MdManageAccounts size={"1rem"} /></span>My Bing</li>
+                <li className="normal"><span className="hamicon"><BsShieldLockFill size={"1rem"} /></span>Privacy</li>
+                <li className="normal"><span className="hamicon"><BiSolidMessage size={"1rem"} /></span>Feedback</li>
 
-                <li onClick={handleDDtwo}><span className="hamicon"><MdHomeFilled size={"1rem"} /></span>Customize your homepage<span className="rightham"><IoIosArrowDown size={"1rem"} /></span></li>
+                <li onClick={handleDDtwo} className="normal"><span className="hamicon"><MdHomeFilled size={"1rem"} /></span>Customize your homepage<span className="rightham"><IoIosArrowDown size={"1rem"} /></span></li>
                 {ddtwo? <ul>
-                    <li className="nested">Show menu bar<span className="rightham"><LiaToggleOnSolid color="#1aa3ff" size={"1.5rem"} /></span></li>
-                    <li className="nested">Show news and interests<span className="rightham"><LiaToggleOnSolid color="#1aa3ff" size={"1.5rem"} /></span></li>
-                    <li className="nested">Show homepage image<span className="rightham"><LiaToggleOnSolid color="#1aa3ff" size={"1.5rem"} /></span></li>
+                    <li className="nested normal">Show menu bar<span className="rightham"><LiaToggleOnSolid color="#1aa3ff" size={"1.5rem"} /></span></li>
+                    <li className="nested normal">Show news and interests<span className="rightham"><LiaToggleOnSolid color="#1aa3ff" size={"1.5rem"} /></span></li>
+                    <li className="nested normal">Show homepage image<span className="rightham"><LiaToggleOnSolid color="#1aa3ff" size={"1.5rem"} /></span></li>
                 </ul> : ""}
                 
                 <hr />
-                <li style={smaller}>Privacy and Cookies * Legal * Advertise * About our ads * Help </li>
-                <li className="sub" style={smaller}>&copy; 2024 Microsoft</li>
+                <li className="smaller">Privacy and Cookies * Legal * Advertise * About our ads * Help </li>
+                <li className="sub smaller">&copy; 2024 Microsoft</li>
             </ul>
         </div> : ""}
         </div>

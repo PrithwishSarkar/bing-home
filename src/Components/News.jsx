@@ -4,7 +4,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
 
-export default function News(){
+export default function News() {
 
 
     const [currentFilter, setCurrentFilter] = useState(0);
@@ -109,15 +109,24 @@ export default function News(){
     return (
 
         <div className="carousel">
-            <span className="arrow" onClick={prevFilter}><IoIosArrowBack color="white" size={"24px"} /></span>
-            {filterList.filter(
-                (d, i) => i > currentFilter && i <= currentFilter + offSet
-            ).map((item) => {
+            <div className="horiznews">
+                <span className="arrow" onClick={prevFilter}><IoIosArrowBack color="white" size={"24px"} /></span>
+                {filterList.filter(
+                    (d, i) => i > currentFilter && i <= currentFilter + offSet
+                ).map((item) => {
 
-                return <Snippet heading={item.name} image={item.img} content={item.content} />
-            })}
-            <span className="arrow" onClick={nextFilter}><IoIosArrowForward color="white" size={"24px"}/></span>
-           
+                    return <Snippet heading={item.name} image={item.img} content={item.content} />
+                })}
+                <span className="arrow" onClick={nextFilter}><IoIosArrowForward color="white" size={"24px"} /></span>
+
+            </div>
+
+            <div className="verticalnews">
+                {filterList.map((item) => {
+
+                    return <Snippet heading={item.name} image={item.img} content={item.content} />
+                })}
+            </div>
         </div>
     );
 };

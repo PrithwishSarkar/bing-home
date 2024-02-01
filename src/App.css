@@ -39,6 +39,9 @@
 .hamb{
     padding: 0 20px;
 }
+.hamacc{
+  display: none;
+}
 .carousel{
   display: flex;
   flex-direction: row;
@@ -47,6 +50,13 @@
   position: absolute;
   bottom: 15px;
   font-size: 0.8rem;
+}
+.verticalnews{
+  display: none;
+}
+.horiznews{
+  display: flex;
+  flex-direction: row;
 }
 .snippet{
   background-color: #2c2c32;
@@ -65,18 +75,20 @@
   display: grid;
   grid-template-columns: 40% 60%;
   padding: 5px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+
   
-  
+}
+.newstext{
+  height: 60px;
+  overflow: hidden;
+  /* white-space: pre-wrap;
+  word-wrap: break-word; */
 }
 .newsbody img{
   width: 60px;
   height: 60px;
 }
-.newsbody span{
-  word-wrap: break-word;
-}
+
 .searchbar{
   width: 500px;
   background-color: white;
@@ -119,7 +131,7 @@
   float: right;
   margin-right: 160px;
   background-color: whitesmoke;
-  max-width: 300px;
+  width: 300px;
   z-index: 2;
   border-radius: 5px;
 }
@@ -127,7 +139,12 @@
 .hammenu li{
   list-style: none;
   padding: 10px 10px;
+}
+.normal{
   font-size: 0.8rem;
+}
+.smaller{
+  font-size: 0.72rem;
 }
 .sub{
   margin-top: -18px;
@@ -135,11 +152,117 @@
 .hamicon{
   margin-left: 5px;
   margin-right: 10px;
+
 }
+
 .nested{
   margin-left: 30px;
 }
 .rightham{
   float: right;
 
+}
+@media only screen and (max-width: 900px) {
+  .App{
+    height: 100vh;
+  }
+  .headleft{
+      display: none;
+  }
+  .headerright{
+    display: none;
+  }
+  .left{
+    padding-left: 15px;
+  }
+  .hamb{
+    display: inline;
+    margin-top: -5px;
+  }
+  html{
+      background-size: auto;
+  }
+  .head{
+
+    width: 100vw;
+    height: 10vh;
+   
+    position: fixed;
+    height: 6vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .searchbar{
+      padding: 0;
+      width: 90vw;
+      height: 40px;
+      position: fixed;
+      margin: 0 0 0 5vw;
+      top: 10vh;
+      /* top: 6vh; */
+  }
+ 
+  
+    #logo{
+      font-size: 1.2rem;
+      margin-left: 5px;
+      margin-right: 0;
+      /* vertical-align: middle; */
+    }
+ 
+    
+    .carousel{
+      width: 96vw;
+      display: flex;
+      flex-direction: column;
+      overflow: scroll;
+      height: 78vh;
+      margin: 0 0 0 2vw;
+    
+    }
+    .arrow{
+      display: none;
+    }
+    .snippet{
+      overflow-y:  hidden;
+      height: 10vh;
+      width: 96vw;
+      margin: 0;
+      margin: 1px;
+    }
+    .newsbody{
+      display: grid;
+      grid-template-columns: 20% 80%;
+    }
+    .horiznews{
+      display: none;
+    }
+    .verticalnews{
+      display: block;
+    }
+    .hammenu{
+      position: fixed;
+      top: 6vh;
+      left: 5vw;
+      width: 95vw;
+      height: 94vh;
+      overflow: scroll;
+      background-color: whitesmoke;
+      z-index: 2;
+      border-radius: 5px;
+      margin: 0;
+      
+    }
+    .hamacc{
+      display: block;
+      text-align: center;
+      margin: 10px 0 10px 0;
+    }
+    .normal{
+      font-size: 1rem;
+    }
+    .smaller{
+      font-size: 0.9rem;
+    }
 }

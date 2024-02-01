@@ -7,7 +7,7 @@ export default function Snippet(props){
             <div className="newshead">{props.heading}</div>
             <div className="newsbody">
                 <img src={props.image} alt="news" />
-                <span>{props.content}</span>
+                <span className="newstext">{props.content}</span>
             </div>
         </div>
     );
